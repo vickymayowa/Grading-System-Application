@@ -1,0 +1,45 @@
+
+html, body {
+    min-height:100%;height:100%;
+  }
+  
+  body {
+    background-color: #033f10;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .bg-purple {
+    background-color: #850323;
+  }
+  
+  .form-input {
+    border: 2px solid #490303;
+    width: -90px;
+  }
+  
+  .form-input:focus {
+    outline-color: #3a3400;
+  }
+  
+  .button {
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+  }
+  
+  .button:active {
+    transform: scale(0.9);
+  }
+  
+  .w {
+    width: 200px;
+  }
+  
+  @media (max-width: 500px) {
+    .w {
+      width: 90%;
+      background-color: #033f10;
+    }
+  }

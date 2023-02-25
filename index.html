@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/js/bootstrap.bundle.js">
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="js.class1.css">
+    <title>Javasrcipt class</title>
+</head>
+<body>
+    <div class="container w-75 rounded-2 mt-5  bg-white text-center">
+            <div class="border border-2 border-white p-2 py-4">
+            <marquee behavior="" direction="left" class=" " style="font-size: 40px;">WElCOME TO VICKY GRADING SYSTEM</marquee>
+            <p id="result" class="bg-danger text-center text-white py-3 fs-3">KINDLY INPUT YOUR SCORE </p>
+            <input type="text" placeholder="Enter your score....." class="w-100 p-2 form-input rounded-1 my-4" id="input">
+            <button class="btn btn-primary text-white  text-center" onclick="grade()">Submit</button>
+        </div>
+    </div>
+   </div>
+   </div>
+<script>
+       function grade () {
+        var score = input.value;
+
+        if(score ==''){
+            result.innerText ='Input A Score '
+            result.className ='bg-danger text-center text-white py-3 fs-3' 
+        } else if (score <=39){
+            var song = new Audio ("failure.webm")
+            result.innerText ='FAILED'
+            result.className ='bg-danger text-center text-white py-3 fs-3'
+            song.play()
+        } else if (score ==40 || score <=44){
+            var song = new Audio ("DJ Sound Effects Pack Free Download Use Serato DJ, Rekordbox.mp3")
+            result.innerText ='Pass'
+            result.className ='bg-warning text-center text white py-3 fs-3'
+            song.play()
+        } else if (score ==45 || score<=49){
+            var song = new Audio ("bomb_and_horn.mp3")
+            result.innerText ='AVERAGE'
+            result.className ='bg-warning text-center text-white py-3 fs-3'
+            song.play()
+        } else if (score ==50 || score<=59){
+            result.innerText ='GOOD'
+            result.className ='bg-warning text-center text-white py-3 fs-3'
+        } else if (score ==60 || score<=70){
+            result.innerText ='VERYGOOD'
+            result.className = 'bg-info text-center text-white py-3 fs-3'
+        } else if (score ==70 || score<=100){
+            var song = new Audio ("stand.mp3.mp3")
+            result.innerText ='EXCELLENT'
+            result.className ='bg-success text-center text-white py-3 fs-3'
+            song.play()
+        }else if (score == 100 || score<=200){
+            result.innerText ='WRONG INPUT '
+            result.className = 'bg-info text-center text-white py-3 fs-3'
+            song.play()
+        } else if(typeof(score) =='string'){
+            result.innerText ='Please Input Good Information Below'
+            result.className ='bg-danger text-center text-white py-3'
+        }
+       }
+</script>
+
+</body>
+</html>
